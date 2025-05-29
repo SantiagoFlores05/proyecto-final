@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matriz de Relaciones - Matemáticas Discretas</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+<body>
+  <h1>Relaciones Binarias</h1>
+
+  <label for="size">Tamaño de la matriz (n):</label>
+  <input type="number" id="size" min="1">
+
+  <label for="mode">Modo de llenado:</label>
+  <select id="mode">
+    <option value="manual">Manual</option>
+    <option value="auto">Automático</option>
+  </select>
+
+  <label for="manualInput">Matriz (manual, filas separadas por salto de línea y elementos por espacio):</label>
+  <textarea id="manualInput" rows="5" placeholder="Ej: 0 1 1\n1 0 0\n0 1 0"></textarea>
+
+  <button onclick="procesar()">Procesar Matriz</button>
+
+  <pre id="output"></pre>
+
+  <!-- GRAFO ABAJO -->
+  <div id="graph"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
